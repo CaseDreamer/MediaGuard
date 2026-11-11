@@ -6,12 +6,12 @@ Blur every image, GIF and video until you click it, and turn bots, apps, webhook
 
 ## Features
 
-- **Blur until clicked** — attachments, embed previews, thumbnails and videos stay blurred until you click them.
-- **Per-user block** — right-click a username or profile and pick *Blur media from this user*. Their media becomes a click-to-load card and stays that way across restarts.
-- **Bot shield** — media from bots, apps and webhooks is replaced with a card, nothing downloads or renders.
-- **Blur everyone** — optional master switch. Off by default, so only blocked users and bots are affected.
-- **Blocked list** — every blocked user appears in the plugin settings with an *Unblur* button.
-- **Live settings** — changes apply without restarting Discord.
+- **Blur until clicked** - attachments, embed previews, thumbnails and videos stay blurred until you click them.
+- **Per-user block** - right-click a username or profile and pick *Blur media from this user*. Their media becomes a click-to-load card and stays that way across restarts.
+- **Bot shield** - media from bots, apps and webhooks is replaced with a card, nothing downloads or renders.
+- **Blur everyone** - optional master switch. Off by default, so only blocked users and bots are affected.
+- **Blocked list** - every blocked user appears in the plugin settings with an *Unblur* button.
+- **Live settings** - changes apply without restarting Discord.
 
 ## Requirements
 
@@ -61,10 +61,10 @@ Restart Discord afterwards.
 
 ## Usage
 
-- **Reveal something** — click the blurred media or the hidden card. A second click opens Discord's normal viewer.
-- **Blur someone** — right-click their name in chat, or open their profile and use the context menu → *Blur media from this user*.
-- **Unblock someone** — right-click them again → *Stop blurring media from this user*, or remove them from the settings list.
-- **Blur everything** — turn on *Blur everyone's media* in the plugin settings.
+- **Reveal something** - click the blurred media or the hidden card. A second click opens Discord's normal viewer.
+- **Blur someone** - right-click their name in chat, or open their profile and use the context menu → *Blur media from this user*.
+- **Unblock someone** - right-click them again → *Stop blurring media from this user*, or remove them from the settings list.
+- **Blur everything** - turn on *Blur everyone's media* in the plugin settings.
 
 ## Settings
 
