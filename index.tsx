@@ -47,6 +47,11 @@ const settings = definePluginSettings({
         description: "Blur everyone's media until you click it. Turn this off to only affect users you blocked and bots.",
         default: false
     },
+    blurOwnMessages: {
+        type: OptionType.BOOLEAN,
+        description: "Also blur media in your own messages. Off by default, so you always see what you uploaded.",
+        default: false
+    },
     blurStrength: {
         type: OptionType.SLIDER,
         description: "How hard the blur is, in pixels",
@@ -291,7 +296,12 @@ function shieldElement(el: HTMLElement, reason: string) {
 }
 
 function scanMessage(msg: HTMLElement) {
-    const blocked = isUserBlocked(getMessageAuthorId(msg));
+    const authorId = getMessageAuthorId(msg);
+    const isOwn = authorId !== null && authorId === UserStore.getCurrentUser()?.id;
+
+    if (isOwn && !settings.store.blurOwnMessages) return;
+
+    const blocked = isUserBlocked(authorId);
     const shielded = blocked || (settings.store.shieldBotAttachments && hasBotTag(msg));
     const blurAll = settings.store.blurAll;
 
@@ -385,6 +395,7 @@ function onClick(event: MouseEvent) {
 function currentFingerprint(): string {
     return [
         settings.store.blurAll,
+        settings.store.blurOwnMessages,
         settings.store.blurStrength,
         settings.store.blurVideos,
         settings.store.blurEmbeds,

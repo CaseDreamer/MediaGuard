@@ -10,6 +10,7 @@ Blur every image, GIF and video until you click it, and turn bots, apps, webhook
 - **Per-user block** - right-click a username or profile and pick *Blur media from this user*. Their media becomes a click-to-load card and stays that way across restarts.
 - **Bot shield** - media from bots, apps and webhooks is replaced with a card, nothing downloads or renders.
 - **Blur everyone** - optional master switch. Off by default, so only blocked users and bots are affected.
+- **Your own uploads stay visible** - media you sent is never blurred unless you turn that on.
 - **Blocked list** - every blocked user appears in the plugin settings with an *Unblur* button.
 - **Live settings** - changes apply without restarting Discord.
 
@@ -71,6 +72,7 @@ Restart Discord afterwards.
 | Setting | Default | Description |
 |---|---|---|
 | Blur everyone's media | off | Blurs every attachment, embed image, thumbnail, GIF and video in chat until clicked. Off means only blocked users and bots are hidden. |
+| Blur my own media | off | Also blurs what you uploaded yourself. Off means your own messages always show normally. |
 | Blur amount | 32 px | Blur radius, 8–80 px. |
 | Blur videos | on | Also covers videos and GIFs (Discord renders GIFs as videos). |
 | Blur embeds | on | Media inside link previews, thumbnails and embed players. |
